@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>PAGINA PRINCIPAL</title>
+		<meta charset="uft=8">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		    <link rel="icon" href="img/ICONO.ico">
+
+    </head>
+     <body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="Principal.html">  DAR CLICK PARA VOLVER AL INICIO</a></li>
+    </ul>
+</nav>
+</header>
+  
+</head>
+
+<h1>Registro de Usuario</h1>
+
+<div class="container7">
+  <div class="content7">
+
+  <form id="registrationForm">
+    <label for="tipoDocumento">Tipo de documento:</label>
+    <select id="tipoDocumento" required>
+      <option value="">Seleccione</option>
+      <option value="CC">Cédula de Ciudadanía</option>
+      <option value="TI">Tarjeta de Identidad</option>
+      <option value="CE">Cédula de Extranjería</option>
+    </select><br>
+
+    <label for="numDocumento">No. Documento:</label>
+    <input type="text" id="numDocumento" pattern="[0-9]{5,}" required><br>
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" pattern="[A-Za-z0-9\s]+" required><br>
+
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" pattern="[A-Za-z0-9\s]+" required><br>
+
+    <label for="fechaNacimiento">Fecha Nacimiento:</label>
+    <input type="date" id="fechaNacimiento" required><br>
+
+    <label for="correo">Correo electrónico:</label>
+    <input type="text" id="correo" pattern="[a-zA-Z0-9._%+-]+@misena\.edu\.co" required><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" pattern="^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@$!%?&])[A-Za-z\d@$!%?&]{10,}$" required><br>
+
+    <label for="confirmPassword">Comprobar password:</label>
+    <input type="password" id="confirmPassword" required><br>
+
+    <label>
+      <input type="checkbox" id="aceptarTerminos" required>
+      <p>Aceptar Términos de uso</p>
+    </label><br>
+
+    <button type="button" onclick="showTerms()">Ver Términos de uso</button><br>
+
+    <button type="submit">Registrarse</button>
+  </form>
+
+  <div id="termsModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeTermsModal()">&times;</span>
+      <h2>Términos de uso</h2>
+      <p>Aquí van los términos y condiciones.</p>
+    </div>
+  </div>
+
+  
+  <br><br><br><br><br><br><br><br><br><br><br><br> 
+  <footer>
+    <p> NICOL DAYANA GARCIA NAVARRETE &copy;</p>
+  </footer>
+</body>
+</html>
